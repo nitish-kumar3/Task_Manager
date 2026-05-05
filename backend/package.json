@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "build": "cd ../frontend && npm install && npm run build"
+    "build": "npm install --prefix ../frontend && npm run build --prefix ../frontend"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
