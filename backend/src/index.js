@@ -30,17 +30,3 @@ const PORT = process.env.PORT || 5000;
 testConnection().then(() => {
   app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
 });
-
-
-
-
-//changes
-const path = require('path');
-
-// Serve frontend static files
-app.use(express.static(path.join(__dirname, '../../frontend/build')));
-
-// All other routes serve React app
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../frontend/build', 'index.html'));
-});
